@@ -1,0 +1,379 @@
+/* ------------- Variables --------------- */
+:root {
+    --primaryColor: #f1f1f1;
+    --black: #222;
+    --black2: #555;
+    --black3: #252525;
+    --black4: #000;
+    --black5: #212529;
+    --red: #eb0028;
+    --white: #fff;
+    --grey: #959595;
+    --grey2: #666;
+    --grey3: #ccc;
+    --secondaryColor: #2b1f4d;
+    --yellow: #ffcc00;
+    --green: #59b210;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Archivo', sans-serif;
+}
+nav{
+    height: 60px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/* ------------- Navbar -------------- */
+
+.navigation{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 1px 10px -7px var(--black2);
+    position: relative;
+}
+
+#navBar{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    color: var(--black);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu-hamburger{
+    font-size: 24px;
+    cursor:pointer;
+    display: none;
+}
+
+.main-nav{
+    flex-basis: 50%;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin: 0 7px;
+}
+
+.main-nav li a{
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color .4s;
+}
+
+.main-nav li a:hover{
+    color: var(--red);
+}
+
+.left-nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.left-nav svg{
+    margin: 0 5px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--black);
+    padding: 7px;
+    border-radius: 50%;
+    transition: all .4s;
+}
+
+.left-nav svg:hover{
+    background-color:var(--red);
+}
+
+.left-nav .cart{
+    position: relative;
+}
+
+.left-nav .cart #quantity{
+    color: var(--white);
+    background-color: var(--red);
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+/* ---------------- End NavBar -------------- */
+
+/* ---------- Start Header Content ------------ */
+
+.header-content{
+    background-color: var(--primaryColor);
+    padding: 20px 0 10px;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    
+}
+
+.slide{
+    display: flex;
+    align-items: center;
+}
+
+.slide .content{
+    flex-basis: 50%;
+}
+
+.slide .content h1{
+    margin: 10px 0;
+}
+
+.slide .content a{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 12px 25px;
+    border: 1px solid transparent;
+    transition: all .4s;
+}
+
+.slide .content a:hover{
+    background-color: var(--primaryColor);
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.slide .banner{
+    flex-basis: 50%;
+}
+.slider .banner img{
+    max-width: 100%;
+}
+
+/* --------------- Collecions --------------- */
+
+.collections{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    margin: 60px auto;
+}
+.collection{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primaryColor);
+    padding: 20px;
+}
+.collection .collection-img{
+    height: 260px;
+}
+.collection .collection-img img{
+    max-height: 100%;
+}
+
+.collection .collection-info h1{
+    margin: 5px 0;
+    color: var(--secondaryColor);
+    font-size: 26px;
+}
+
+.collection .collection-info a{
+    background-color: var(--secondaryColor);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    border-radius: 20px;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: all .4s;
+}
+
+.collection .collection-info a:hover{
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    border-color: var(--secondaryColor);
+}
+
+/* ---------------- Lasted Products ----------------- */
+
+.lasted-products .title-section{
+    text-align: center;
+    background-color: var(--primaryColor);
+    padding: 18px 0;
+    width: 100%;
+    margin: 10px 0 20px;
+}
+
+.lasted-products .title-section span{
+    width: 8px;
+    height: 8px;
+    background-color: var(--black);
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-right: 4px;
+    position: relative;
+    cursor: pointer;
+}
+.lasted-products .title-section span::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--black);
+    top: -2px;
+    left: -2px;
+}
+.lasted-products .title-section h1{
+    color: var(--black);
+    font-weight: lighter;
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.lasted-products .products .arrows{
+    width: 100%;
+    text-align: right;
+    padding-right: 150px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.lasted-products .products .arrows button{
+    background: none;
+    border: none;
+    outline: none;
+    border: 1px solid var(--primaryColor);
+    display: inline-block;
+    height: 35px;
+    width: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.lasted-products .products .arrows button:hover{
+    background-color: var(--red);
+}
+
+.lasted-products .products .arrows svg{
+    fill: var(--grey);
+    width: 18px;
+    height: 18px;
+}
+
+ .lasted-products .products .products-items{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+} 
+ 
+.lasted-products .products .products-items .product{
+    text-align:center;
+} 
+
+.lasted-products .products .products-items .product .product-img{
+    height: 240px;
+}
+
+.lasted-products .products .products-items .product .product-img img{
+    max-height: 100%;
+}
+
+.lasted-products .products .products-items .product .product-info h3{
+    font-weight: lighter;
+    font-size: 16px;
+    margin-top: 20px;
+    color: var(--black);
+}
+
+.lasted-products .products .products-items .product .product-info .rating svg{
+    width: 15px;
+    height: 15px;
+    fill: var(--yellow);
+    margin: 5px 0;
+}
+
+.lasted-products .products .products-items .product .price{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.lasted-products .products .products-items .product a{
+    color: var(--black);
+    text-transform: uppercase;
+    border: 1px solid var(--black);
+    display: block;
+    padding: 12px 0;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--primaryColor);
+    transition: all .3s;
+}
+
+.lasted-products .products .products-items .product a:hover{
+    background-color: var(--black);
+    color: var(--primaryColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.test{
+    margin-top: 100px;
+}
