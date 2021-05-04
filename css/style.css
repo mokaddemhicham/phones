@@ -230,15 +230,15 @@ li {
 
 /* ---------------- Lasted Products ----------------- */
 
-.lasted-products .title-section{
+.title-section{
     text-align: center;
     background-color: var(--primaryColor);
-    padding: 18px 0;
+    padding: 10px 0;
     width: 100%;
     margin: 10px 0 20px;
 }
 
-.lasted-products .title-section span{
+.title-section span{
     width: 8px;
     height: 8px;
     background-color: var(--black);
@@ -248,7 +248,7 @@ li {
     position: relative;
     cursor: pointer;
 }
-.lasted-products .title-section span::after{
+.title-section span::after{
     content: '';
     position: absolute;
     width: 10px;
@@ -257,7 +257,7 @@ li {
     top: -2px;
     left: -2px;
 }
-.lasted-products .title-section h1{
+.title-section h1{
     color: var(--black);
     font-weight: lighter;
     font-size: 18px;
@@ -297,43 +297,44 @@ li {
     height: 18px;
 }
 
- .lasted-products .products .products-items{
+.products-items{
      display: grid;
      grid-template-columns: repeat(4, 1fr);
 } 
  
-.lasted-products .products .products-items .product{
+.products-items .product{
     text-align:center;
+    position: relative;
 } 
 
-.lasted-products .products .products-items .product .product-img{
+.products-items .product .product-img{
     height: 240px;
 }
 
-.lasted-products .products .products-items .product .product-img img{
+.products-items .product .product-img img{
     max-height: 100%;
 }
 
-.lasted-products .products .products-items .product .product-info h3{
+.products-items .product .product-info h3{
     font-weight: lighter;
     font-size: 16px;
     margin-top: 20px;
     color: var(--black);
 }
 
-.lasted-products .products .products-items .product .product-info .rating svg{
+.products-items .product .product-info .rating svg{
     width: 15px;
     height: 15px;
     fill: var(--yellow);
     margin: 5px 0;
 }
 
-.lasted-products .products .products-items .product .price{
+.products-items .product .price{
     margin-bottom: 5px;
     display: block;
 }
 
-.lasted-products .products .products-items .product a{
+.products-items .product a{
     color: var(--black);
     text-transform: uppercase;
     border: 1px solid var(--black);
@@ -346,34 +347,246 @@ li {
     transition: all .3s;
 }
 
-.lasted-products .products .products-items .product a:hover{
+.products-items .product a:hover{
     background-color: var(--black);
     color: var(--primaryColor);
 }
 
+.products-items .product .actions{
+    width: 56%;
+    height: 52px;
+    background-color: rgba(255,255,255,.5);
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-100%) scale(0);
+    transition: .5s;
+}
 
+.products-items .product:hover .actions{
+    transform: translate(-50%,-100%) scale(1);
+}
 
+.products-items .product .actions .svg{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
 
+.products-items .product .actions .svg::before{
+    --border : 3px solid var(--black);
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    transform: translateX(0);
+    width: 0;
+    height: 0;
+    border-top: var(--border);
+    border-left: var(--border);
+    opacity: 0;
+    z-index: 1;
+    transition: .5s;
+}
 
+.products-items .product .actions .svg::after{
+    --border : 3px solid var(--black);
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -2px;
+    transform: translateX(0);
+    width: 0;
+    height: 0;
+    border-bottom: var(--border);
+    border-right: var(--border);
+    opacity: 0;
+    z-index: 1;
+    transition: .5s;
+}
+.products-items .product .actions .svg:hover::before,
+.products-items .product .actions .svg:hover::after{
+    width: 43px;
+    height: 43px;
+    opacity: 1;
+}
 
+.products-items .product .actions .svg svg{
+    width: 36px;
+    height: 36px;
+    margin: 8px 5px 0;
+    fill: var(--white);
+    background-color: var(--red);
+    padding: 8px;
+    transition: .5s;
+}
 
+.products-items .product .actions .svg:hover svg{
+    background-color: var(--black4);
+    
+}
 
+/*----------- All Products ---------*/
 
+.all-products .title-section {
+    margin: 60px 0;
+}
 
+.all-products .title-section .title{
+    display: inline-block;
+    margin: 0 10px;
+}
 
+.all-products .title-section .title span{
+    background-color: var(--grey);
+    transition: all .5s;
+}
 
+.all-products .title-section .title span::after{
+    border-color: var(--grey);
+    transition: all .5s;
+}
 
+.all-products .title-section .title h1{
+    color: var(--grey);
+    transition: all .5s;
+}
 
+.all-products .title-section .title.active span,
+.all-products .title-section .title:hover span{
+    background-color: var(--black);
+}
 
+.all-products .title-section .title.active span::after,
+.all-products .title-section .title:hover span::after{
+    border-color: var(--black);
+}
 
+.all-products .title-section .title.active h1,
+.all-products .title-section .title:hover h1{
+    color: var(--black);
+}
 
+.all-products .products-items{
+    margin-bottom: 40px;
+}
 
+/* ---------------- Services ----------------- */
 
+#services{
+    background-color: var(--primaryColor);
+    padding: 60px 0;
+}
 
+.services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
 
+.services .service{
+    text-align: center;
+}
 
+.services .service .service-icon{
+    background-color: var(--white);
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    position: relative;
+}
 
+.services .service .service-icon::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.services .service .service-icon svg{
+    margin-top: calc(30px/2);
+    width: 30px;
+    height: 30px;
+    transition: all 1s;
+    perspective: 400px;
+}
+
+.services .service:hover .service-icon svg{
+    transform: rotateY(180deg);
+}
+
+.services .service .service-name{
+    font-weight: lighter;
+}
+
+/* --------------- Testimonial ---------------- */
+
+#testimonial{
+    background-color: var(--black);
+    padding: 60px 0;
+}
+
+#testimonial .client{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    color: var(--grey3);
+}
+#testimonial .client .client-image{
+    margin-bottom: 35px;
+}
+
+#testimonial .client .client-image img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#testimonial .client .comment{
+    text-align: center;
+    line-height: 1.7;
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+#testimonial .client .client-info{
+    margin-bottom: 35px;
+}
+#testimonial .client .client-info h3{
+    margin-bottom: 7px;
+}
+
+#testimonial .client .client-info span{
+    display: block;
+    font-size: 14px;
+}
+
+#testimonial .slideshow-nav{
+    text-align: center;
+}
+#testimonial .slideshow-nav li{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--grey3);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+}
+
+#testimonial .slideshow-nav li.active{
+    background-color: var(--red);
+}
 
 .test{
-    margin-top: 100px;
+    margin-top: 300px;
 }
