@@ -13,15 +13,20 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/media.min.css">
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="navigation">
             <div class="container" id="navBar">
-                <div class="menu-hamburger"><i class="fas fa-bars"></i></div>
+                <div class="menu-hamburger">
+                    <span id="s1"></span>
+                    <span id="s2"></span>
+                    <span id="s3"></span>
+                </div>
                 <div class="logo">phone</div>
                 <ul class="main-nav">
                     <li><a href="#">Home</a></li>
@@ -47,13 +52,13 @@
         </div>
         <div class="header-content">
             <div class="slide container">
-                <div class="content">
+                <div class="content" data-aos="fade-right" data-aos-delay="200">
                     <span>New Inspiration 2021</span>
                     <h1>CELL PHONE TOP DEALS!</h1>
                     <p>Check out the latest deals on cell phones</p>
                     <a href="#">Shop Now</a>
                 </div>
-                <div class="banner">
+                <div class="banner" data-aos="fade-left" data-aos-delay="300">
                     <img src="img/banner_01.png" alt="banner">
                 </div>
             </div>
@@ -683,7 +688,7 @@
         <!-- Start Services -->
         <section id="services">
             <div class="container services">
-                <div class="service" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="100">
+                <div class="service" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
                     <div class="service-icon">
                         <svg>
                             <use xlink:href="./img/sprite.svg#icon-airplane"></use>
@@ -691,7 +696,7 @@
                     </div>
                     <h4 class="service-name">FREE SHIPPING WORLD WIDE</h4>
                 </div>
-                <div class="service" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                <div class="service" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
                     <div class="service-icon">
                         <svg>
                             <use xlink:href="./img/sprite.svg#icon-credit-card-alt"></use>
@@ -699,7 +704,7 @@
                     </div>
                     <h4 class="service-name">100% MONEY BACK GUARANTEE</h4>
                 </div>
-                <div class="service" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="service" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
                     <div class="service-icon">
                         <svg>
                             <use xlink:href="./img/sprite.svg#icon-credit-card"></use>
@@ -707,7 +712,7 @@
                     </div>
                     <h4 class="service-name">MANY PAYMENT GATEWAYS</h4>
                 </div>
-                <div class="service" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+                <div class="service" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
                     <div class="service-icon">
                         <svg>
                             <use xlink:href="./img/sprite.svg#icon-headphones"></use>
@@ -727,16 +732,16 @@
                         <div class="client">
                             <div class="client-image" >
                                 <img src="img/profile1.jpg" alt="Profile" data-aos="fade-up"
-                                data-aos-anchor-placement="center-center">
+                                data-aos-anchor-placement="top-bottom">
                             </div>
                             <p class="comment" data-aos="fade-up"
-                            data-aos-anchor-placement="center-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic nesciunt tempore
+                            data-aos-anchor-placement="top-bottom">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic nesciunt tempore
                                 quibusdam consequatur eligendi unde officia ex quae.ipsum dolor sit amet consectetur adipisicing
                                 elit. Recusandae fuga hic nesciunt tempore
                                 quibusdam consequatur eligendi unde officia ex quae.
                             </p>
                             <div class="client-info" data-aos="fade-up"
-                            data-aos-anchor-placement="center-center">
+                            data-aos-anchor-placement="top-bottom">
                                 <h3>John Smith</h3>
                                 <span>Founder at Apple</span>
                             </div>
@@ -745,19 +750,169 @@
                     
                 </ul>
                 <ul class="slideshow-nav" data-aos="fade-up"
-                data-aos-anchor-placement="center-center">
+                data-aos-anchor-placement="top-bottom">
                     <li class="active"></li>
                     <li></li>
                     <li></li>
                     <li></li>
                 </ul>
-            
             </div>
         </section>
+
         <!-- End Testimonial -->
-        <div class="test"></div>
+
+        <!-- Start Phone News -->
+        <article id="phone-news">
+            <div class="container">
+                <div class="title-section">
+                    <div class="title">
+                        <span></span>
+                        <h1>Phone News</h1>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="article" data-aos="fade-up">
+                        <div class="article-image">
+                            <img src="img/news1.jpg" alt="news">
+                        </div>
+                        <div class="article-info">
+                            <h3 class="article-title">
+                                Styling White Shirts After A Cool Day
+                            </h3>
+                            <span class="article-author">By Admin</span>
+                            <p class="article-excerpt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                            provident rem sed minus natus unde vel modi!
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="article" data-aos="fade-up">
+                        <div class="article-image">
+                            <img src="img/news2.jpg" alt="news">
+                        </div>
+                        <div class="article-info">
+                            <h3 class="article-title">
+                                Styling White Shirts After A Cool Day
+                            </h3>
+                            <span class="article-author">By Admin</span>
+                            <p class="article-excerpt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                            provident rem sed minus natus unde vel modi!
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="article" data-aos="fade-up">
+                        <div class="article-image">
+                            <img src="img/news3.jpg" alt="news">
+                        </div>
+                        <div class="article-info">
+                            <h3 class="article-title">
+                                Styling White Shirts After A Cool Day
+                            </h3>
+                            <span class="article-author">By Admin</span>
+                            <p class="article-excerpt">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
+                            provident rem sed minus natus unde vel modi!
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- End Phone News -->
+        
+        <!-- Start Newsletter -->
+        <section id="newsletter">
+            <div class="container">
+                <div class="newsletter-wrapper">
+                    <div class="description" data-aos="fade-up">
+                        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                        <p>A short sentence describing what someone will receive by subscribing</p>
+                    </div>
+                    <form action="#" data-aos="fade-up">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email Address">
+                        <input type="submit" value="subscribe" id="subscribe">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End Newsletter -->
     </main>
-    <script src="js/script.js"></script>
-    
+    <!-- End Main -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="top-footer">
+                <ul data-aos="fade-up" data-aos-delay="100">
+                    <li>EXTRAS</li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Gift Certificates</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                    <li><a href="#">Specials</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+                <ul data-aos="fade-up" data-aos-delay="200">
+                    <li>INFORMATION</li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+                <ul data-aos="fade-up" data-aos-delay="300">
+                    <li>MY ACCOUNT</li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Wish List</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+                <ul data-aos="fade-up" data-aos-delay="400">
+                    <li>CONTACT US</li>
+                    <li>
+                        <span>
+                            <svg>
+                                <use xlink:href="./img/sprite.svg#icon-location"></use>
+                            </svg>
+                        </span>  
+                        42 Dream House, Dreammy street, 7131 Dreamville, USA
+                    </li>
+                    <li>
+                        <span>
+                            <svg>
+                                <use xlink:href="./img/sprite.svg#icon-envelop"></use>
+                            </svg>
+                        </span>
+                        h.mokaddem@outlook.com
+                    </li>
+                    <li>
+                        <span>
+                            <svg>
+                                <use xlink:href="./img/sprite.svg#icon-phone"></use>
+                            </svg>
+                        </span>
+                        +212 697332933
+                    </li>
+                    <li>
+                        <span>
+                            <svg>
+                                <use xlink:href="./img/sprite.svg#icon-paperplane"></use>
+                            </svg>
+                        </span>
+                        Dream City, USA
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-footer">
+                <div class="copyright">&copy; Created By : <a href="#">Hicham Mokaddem</a></div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="js/script.min.js"></script>
 </body>
 </html>
